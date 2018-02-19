@@ -1,0 +1,31 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * @package inhabitent_Theme
+ */
+
+?>
+
+			</div><!-- #content -->
+
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info">
+				<i class="fas fa-camera-retro"></i>
+					
+				<p>info@inhabitent.com</p>
+				<p>778-456-7891</p>
+				
+				
+
+				<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+				
+
+				</div><!-- .site-info -->
+			</footer><!-- #colophon -->
+		</div><!-- #page -->
+
+		<?php wp_footer(); ?>
+
+	</body>
+</html>
