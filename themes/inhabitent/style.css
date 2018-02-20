@@ -49,7 +49,7 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
-  margin: 0, auto; }
+  margin: 0; }
 
 article,
 aside,
@@ -463,13 +463,6 @@ a {
     display: block;
     text-decoration: none; }
 
-
-footer{
-
-  background-image: url("./img/dark-wood.png");
-  padding: 2rem;
-}
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -608,6 +601,10 @@ footer{
 
 .bypostauthor {
   display: block; }
+
+footer {
+  background-image: url("../../img/dark-wood.png");
+  padding: 2rem; }
 
 /*--------------------------------------------------------------
 # Media
