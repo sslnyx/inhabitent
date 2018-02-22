@@ -45,7 +45,7 @@ get_header(); ?>
 <?php			
 $args = array(
    'order' => 'ASC',
-   'posts_per_page' => 8,
+   'posts_per_page' => 3,
    'post_type' => 'post',
 );
 $journals = new WP_Query( $args ); ?>
@@ -67,7 +67,8 @@ $journals = new WP_Query( $args ); ?>
 
 
 
-   <?php endwhile; ?>
+	 <?php endwhile; ?>
+	 
    <?php the_posts_navigation(); ?>
    <?php wp_reset_postdata(); ?>
 <?php else : ?>
