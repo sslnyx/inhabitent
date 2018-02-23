@@ -55,7 +55,7 @@ function hero_style() {
 			return;
 	}
 					$image = CFS()->get( 'hero_image' );
-					$banner_css = ".page-template-about .entry-header{
+					$banner_css = ".page-template-about .site-header{
 							background: 
 							linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 							url({$image}) no-repeat center bottom;
@@ -65,3 +65,19 @@ function hero_style() {
 					wp_add_inline_style ('inhabitent-style', $banner_css);
 	}
 add_action( 'wp_enqueue_scripts', 'hero_style');
+
+function hero_style_front() {
+	if (! is_front_page() ) {
+			return;
+	}
+					$imagef = CFS()->get( 'hero_image' );
+					$banner_css = ".page-template-default .front-hero{
+							background: 
+							linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
+							url({$imagef}) no-repeat center bottom;
+							background-size: cover, cover;
+							height: 100vh;
+						}";
+					wp_add_inline_style ('inhabitent-style', $banner_css);
+	}
+add_action( 'wp_enqueue_scripts', 'hero_style_front');

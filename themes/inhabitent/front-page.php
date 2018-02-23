@@ -7,13 +7,18 @@
 
 get_header(); ?>
 
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+        <section class="front-hero">
+        <img class="site-logo" src="<?php echo get_template_directory_uri();?>/img/logos/inhabitent-logo-full.svg"/>
 
+</section>
 
 		<!-- Product terms -->
-		<section class="product-info container">
-                <h2>Shop Stuff</h2>
+		<section class="product-info-container">
+                <h1>Shop Stuff</h1>
                 <?php
                 $terms = get_terms( array(
                     'taxonomy'   => 'product_type',
@@ -39,8 +44,8 @@ get_header(); ?>
             </section>
 
 
-      
-			<h1>front page</h1>
+      <section class="journals">
+			<h1>inhabitent journal</h1>
 			
 <?php			
 $args = array(
@@ -52,22 +57,34 @@ $journals = new WP_Query( $args ); ?>
 
 <?php $journals = new WP_Query( $args ); /* $args set above*/ ?>
 <?php if ( $journals->have_posts() ) : ?>
+<div class="journal-blocks">
 	 <?php while ( $journals->have_posts() ) : $journals->the_post(); ?>
-
+	 
+<div class="journal-wrapper">
 	 <?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
-      <h1><?php the_title(); ?></h1>
+      
 			
 			<div class="entry-meta">
-			<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
-			<a href="<?php the_permalink();?>"> read more</a>
+			<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> 
+			<!-- / -->
+			 <?php 
+			//  inhabitent_posted_by(); 
+			 ?>
+			
+			<h1><?php the_title(); ?></h1>
+			
+			<a class="buttonReadMore" href="<?php the_permalink();?>"> read more</a>
 		</div><!-- .entry-meta -->
 
 
-
+</div><!-- .journal-wrapper -->
 	 <?php endwhile; ?>
+
+</div><!-- .journal-blocks -->
+</section>
 	 
    <?php the_posts_navigation(); ?>
    <?php wp_reset_postdata(); ?>
@@ -77,10 +94,12 @@ $journals = new WP_Query( $args ); ?>
 
 
 
+
+
 			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
