@@ -11,6 +11,9 @@ h1 {
 }
 
 .site-logo {
+  img {
+    width: 50%;
+  }
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,7 +43,10 @@ h1 {
   p {
     text-align: center;
   }
-  a:link {
+}
+
+.btn {
+  &:link {
     background-color: #248a83;
     font-size: 1.2rem;
     color: white;
@@ -48,16 +54,16 @@ h1 {
     border: 1px solid;
     padding: .75rem 1.5rem;
   }
-  a:visited {
+  &:visited {
     text-decoration: none;
     color: white;
   }
-  a:hover {
+  &:hover {
     background-color: #19625d;
     border: 0 solid;
     text-decoration: none;
   }
-  a:active {
+  &:active {
     text-decoration: none;
   }
 }
@@ -86,27 +92,30 @@ h1 {
       color: #248a83;
       min-height: 80px;
     }
-    a:link {
-      background-color: white;
-      font-size: 1.2rem;
-      color: black;
-      text-decoration: none;
-      border: 1px solid;
-      padding: .75rem 1.5rem;
-    }
-    a:visited {
-      color: black;
-      text-decoration: none;
-    }
-    a:hover {
-      background-color: #248a83;
-      border: 0 solid;
-      text-decoration: none;
-      color: white;
-    }
-    a:active {
-      text-decoration: none;
-    }
+  }
+}
+
+.buttonReadMore {
+  &:link {
+    background-color: white;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    border: 1px solid;
+    padding: .75rem 1.5rem;
+  }
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: #248a83;
+    border: 0 solid;
+    text-decoration: none;
+    color: white;
+  }
+  &:active {
+    text-decoration: none;
   }
 }
 
@@ -122,21 +131,25 @@ h1 {
   justify-content: space-between;
   margin: 0 auto;
   .product-type-block-wrapper-archives {
-    a:link {
-      text-decoration: none;
+    .btn2 {
+      &:link {
+        text-decoration: none;
+      }
     }
   }
 }
-.thumbnail-wrapper{
+
+.thumbnail-wrapper {
   overflow: hidden;
   border-bottom: 5px solid #e1e1e1;
-  height:250px;
+  height: 250px;
   img {
     // position: absolute;
-    height: 250px; 
+    height: 250px;
     width: 100%;
   }
 }
+
 .products-wrapper {
   width: 1120px;
   border-top: 1px dashed #c8c8c8;
@@ -147,28 +160,81 @@ h1 {
   grid-auto-rows: minmax(300px, auto);
   margin: 0 auto;
   margin-top: 3.75rem;
-  .single-product-wrapper{
+  .single-product-wrapper {
     border: 1px solid #e1e1e1;
   }
 }
 
-.site-content{
+//////////////////////////////////////journals///////////////////////
+.site-content {
   padding: 48px;
-.content-area{
-  width: 1120px;
-  margin:0 auto;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
-}
-
-.widget-area{
-  padding:2rem;
-  border-left:1px solid #e1e1e1;
-  
+  .content-area {
+    width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
 }
 
-.articles-wrapper{
-  padding:2rem;
+.widget-area {
+  padding: 3.75rem;
+  padding-right: 0;
+  border-left: 1px solid #e1e1e1;
 }
 
+.journal-page-blocks {
+  padding: 3.75rem;
+  padding-left: 0; // position: relative;
+  h1 {
+    color: white;
+    margin: 0;
+    margin-top: 2.25rem;
+    
+  }
+  img {
+    // position:absolute;
+    width: 100%;
+  }
+  article {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.entry-header {
+  position: relative;
+}
+
+.entry-title-index {
+  background-color: #248a83;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 80%;
+  padding: .75rem 1.5rem;
+  margin-top: 2.25rem;
+  a:link {
+    // background-color: #248a83;
+    font-size: 2.1rem;
+    color: white;
+    text-decoration: none; // padding:1rem;
+  }
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  a:active {
+    text-decoration: none;
+  }
+}
+
+.entry-meta-index {
+  color: white;
+  background-color: #248a83;
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+}
+
+.entry-content-index {
+  margin-bottom: 2rem;
+}

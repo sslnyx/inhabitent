@@ -4,29 +4,27 @@
 
 /* Links */
 
-a {
+.menu {
 	color: $color__link;
 	text-transform: uppercase;
-	&:visited {
+	a:visited {
 		color: $color__link-visited;
 	}
-	&:hover,
-	&:focus,
-	&:active {
+	a:hover,
+	a:focus,
+	a:active {
 		color: $color__link-hover;
 	}
-	&:focus {
+	a:focus {
 		outline: thin dotted;
 	}
-	&:hover,
-	&:active {
+	a:hover,
+	a:active {
 		outline: 0;
 	}
 }
 
-.menu-holder{
-	height:48px;
-}
+
 
 .white-tent{
 	width:25%;
@@ -36,6 +34,7 @@ a {
 }
 
 .banner-wrap{
+	z-index: 99;
 	position: fixed;
 	width:100%;
 	border-bottom: 1px solid #e1e1e1;

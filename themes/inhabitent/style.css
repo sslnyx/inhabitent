@@ -415,20 +415,20 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
-a {
+.menu {
   color: #248a83;
   text-transform: uppercase; }
-  a:visited {
+  .menu a:visited {
     color: #248a83; }
-  a:hover, a:focus, a:active {
+  .menu a:hover,
+  .menu a:focus,
+  .menu a:active {
     color: #f0e4d1; }
-  a:focus {
+  .menu a:focus {
     outline: thin dotted; }
-  a:hover, a:active {
+  .menu a:hover,
+  .menu a:active {
     outline: 0; }
-
-.menu-holder {
-  height: 48px; }
 
 .white-tent {
   width: 25%;
@@ -436,6 +436,7 @@ a {
   padding-bottom: 0; }
 
 .banner-wrap {
+  z-index: 99;
   position: fixed;
   width: 100%;
   border-bottom: 1px solid #e1e1e1;
@@ -524,12 +525,28 @@ a {
 .widget {
   margin: 0 0 0;
   /* Make sure select elements fit in widgets. */ }
+  .widget h2 {
+    margin-top: 0; }
   .widget ul {
     padding: 0; }
     .widget ul li {
       list-style: none; }
   .widget select {
     max-width: 100%; }
+
+#footer-sidebar1 {
+  width: 340px;
+  margin-left: 5px;
+  margin-right: 5px; }
+
+#footer-sidebar2 {
+  float: left;
+  width: 340px;
+  margin-right: 5px; }
+
+#footer-sidebar3 {
+  float: left;
+  width: 340px; }
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -652,6 +669,8 @@ h1 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+  .site-logo img {
+    width: 50%; }
 
 .product-type-blocks, .journal-blocks {
   width: 1120px;
@@ -678,22 +697,26 @@ h1 {
     margin: 0 auto; }
   .product-type-blocks p, .journal-blocks p {
     text-align: center; }
-  .product-type-blocks a:link, .journal-blocks a:link {
-    background-color: #248a83;
-    font-size: 1.2rem;
-    color: white;
-    text-decoration: none;
-    border: 1px solid;
-    padding: .75rem 1.5rem; }
-  .product-type-blocks a:visited, .journal-blocks a:visited {
-    text-decoration: none;
-    color: white; }
-  .product-type-blocks a:hover, .journal-blocks a:hover {
-    background-color: #19625d;
-    border: 0 solid;
-    text-decoration: none; }
-  .product-type-blocks a:active, .journal-blocks a:active {
-    text-decoration: none; }
+
+.btn:link {
+  background-color: #248a83;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  border: 1px solid;
+  padding: .75rem 1.5rem; }
+
+.btn:visited {
+  text-decoration: none;
+  color: white; }
+
+.btn:hover {
+  background-color: #19625d;
+  border: 0 solid;
+  text-decoration: none; }
+
+.btn:active {
+  text-decoration: none; }
 
 .journal-blocks .journal-wrapper {
   border: 1px solid #e1e1e1;
@@ -716,23 +739,27 @@ h1 {
     font-size: 1.2rem;
     color: #248a83;
     min-height: 80px; }
-  .journal-blocks .entry-meta a:link {
-    background-color: white;
-    font-size: 1.2rem;
-    color: black;
-    text-decoration: none;
-    border: 1px solid;
-    padding: .75rem 1.5rem; }
-  .journal-blocks .entry-meta a:visited {
-    color: black;
-    text-decoration: none; }
-  .journal-blocks .entry-meta a:hover {
-    background-color: #248a83;
-    border: 0 solid;
-    text-decoration: none;
-    color: white; }
-  .journal-blocks .entry-meta a:active {
-    text-decoration: none; }
+
+.buttonReadMore:link {
+  background-color: white;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  border: 1px solid;
+  padding: .75rem 1.5rem; }
+
+.buttonReadMore:visited {
+  color: black;
+  text-decoration: none; }
+
+.buttonReadMore:hover {
+  background-color: #248a83;
+  border: 0 solid;
+  text-decoration: none;
+  color: white; }
+
+.buttonReadMore:active {
+  text-decoration: none; }
 
 .page-title {
   margin: 0;
@@ -747,7 +774,7 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto; }
-  .product-type-blocks-archives .product-type-block-wrapper-archives a:link {
+  .product-type-blocks-archives .product-type-block-wrapper-archives .btn2:link {
     text-decoration: none; }
 
 .thumbnail-wrapper {
@@ -780,8 +807,49 @@ h1 {
     grid-template-columns: 3fr 1fr; }
 
 .widget-area {
-  padding: 2rem;
+  padding: 3.75rem;
+  padding-right: 0;
   border-left: 1px solid #e1e1e1; }
 
-.articles-wrapper {
-  padding: 2rem; }
+.journal-page-blocks {
+  padding: 3.75rem;
+  padding-left: 0; }
+  .journal-page-blocks h1 {
+    color: white;
+    margin: 0;
+    margin-top: 2.25rem; }
+  .journal-page-blocks img {
+    width: 100%; }
+  .journal-page-blocks article {
+    margin-bottom: 3.75rem; }
+
+.entry-header {
+  position: relative; }
+
+.entry-title-index {
+  background-color: #248a83;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 80%;
+  padding: .75rem 1.5rem;
+  margin-top: 2.25rem; }
+  .entry-title-index a:link {
+    font-size: 2.1rem;
+    color: white;
+    text-decoration: none; }
+  .entry-title-index a:visited {
+    text-decoration: none;
+    color: white; }
+  .entry-title-index a:active {
+    text-decoration: none; }
+
+.entry-meta-index {
+  color: white;
+  background-color: #248a83;
+  position: absolute;
+  right: 0;
+  bottom: 7px; }
+
+.entry-content-index {
+  margin-bottom: 2rem; }

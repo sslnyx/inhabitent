@@ -39,7 +39,7 @@ get_header(); ?>
                             <div class="product-type-block-wrapper-archives">
                                 <p>
                                     <a href="<?php echo get_term_link( $term ); ?>"
-                                      class="btn"><?php echo $term->name; ?></a>
+                                      class="btn2"><?php echo $term->name; ?></a>
                                 </p>
                             </div>
                         <?php endforeach; ?>

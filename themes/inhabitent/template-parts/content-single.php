@@ -13,9 +13,9 @@
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title-index">', '</h1>' ); ?>
 
-		<div class="entry-meta">
+		<div class="entry-meta-index">
 			<?php 
 			inhabitent_posted_on(); 
 			?> / <?php
@@ -26,7 +26,7 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content-index">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

@@ -4,6 +4,9 @@
 
 .widget {
 	margin: 0 0 $base__space-unit;
+	h2{
+		margin-top: 0;
+	}
 	ul {
 		padding: 0;
 		li {
@@ -15,6 +18,24 @@
 		max-width: 100%;
 	}
 }
+
+ 
+ #footer-sidebar1 {
+	width: 340px;
+	margin-left: 5px;
+	margin-right: 5px;
+ }
+ 
+ #footer-sidebar2 {
+	float: left;
+	width: 340px;
+	margin-right: 5px;
+ }
+ 
+ #footer-sidebar3 {
+	float: left;
+	width: 340px;
+ }
 
 /* Search widget. */
 
