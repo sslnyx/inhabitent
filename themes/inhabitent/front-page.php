@@ -11,10 +11,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-        <section class="front-hero">
+
         <img class="site-logo" src="<?php echo get_template_directory_uri();?>/img/logos/inhabitent-logo-full.svg"/>
 
-</section>
 
 		<!-- Product terms -->
 		<section class="product-info-container">

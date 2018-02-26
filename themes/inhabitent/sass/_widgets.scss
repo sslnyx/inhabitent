@@ -4,7 +4,12 @@
 
 .widget {
 	margin: 0 0 $base__space-unit;
-
+	ul {
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
@@ -12,6 +17,7 @@
 }
 
 /* Search widget. */
+
 .widget_search .search-submit {
 	display: none;
 }

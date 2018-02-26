@@ -9,30 +9,71 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<section class="menu-holder">
-</section>
 		
-      <h1>this is the archive product</h1>
+			<h1 class="page-title">shop stuff</h1>
+			
+					<!-- Product terms -->
+
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					// the_archive_title( '<h1 class="page-title">', '</h1>' );
+					// the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</header>
+			<!-- .page-header -->
 
+			<section class="product-info-container-archives">
+                <?php
+                $terms = get_terms( array(
+                    'taxonomy'   => 'product_type',
+                    'hide_empty' => 0,
+                ) );
+                if ( ! empty( $terms ) ) :
+                    ?>
+                    <div class="product-type-blocks-archives">
+                        <?php foreach ( $terms as $term ) :
+                            ?>
+                            <div class="product-type-block-wrapper-archives">
+                                <p>
+                                    <a href="<?php echo get_term_link( $term ); ?>"
+                                      class="btn"><?php echo $term->name; ?></a>
+                                </p>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+						</section>
+						
+
+
+<div class="products-wrapper">
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
 
+			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="single-product-wrapper">
+							<div class="thumbnail-wrapper">
 				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+							 if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail('large' ); ?>
+						<?php endif; ?>
+						</div>
+				<div class="product-name-price">
+				
+				<?php	$price =  CFS()->get( 'price' ); ?>
+					
+				
+				<?php the_title( sprintf( '<p class="entry-title">'), '..........'.$price.'</p>' ); ?>				
+
+												</div> <!-- product-name-price -->
+				</div><!--single-product-wrapper -->
+
 
 			<?php endwhile; ?>
+												</div>
 
 			<?php the_posts_navigation(); ?>
 
@@ -45,5 +86,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

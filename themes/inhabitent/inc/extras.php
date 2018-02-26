@@ -71,7 +71,7 @@ function hero_style_front() {
 			return;
 	}
 					$imagef = CFS()->get( 'hero_image' );
-					$banner_css = ".page-template-default .front-hero{
+					$banner_css = ".page-template-default .site-header{
 							background: 
 							linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
 							url({$imagef}) no-repeat center bottom;

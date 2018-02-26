@@ -416,10 +416,10 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: white;
+  color: #248a83;
   text-transform: uppercase; }
   a:visited {
-    color: white; }
+    color: #248a83; }
   a:hover, a:focus, a:active {
     color: #f0e4d1; }
   a:focus {
@@ -428,47 +428,52 @@ a {
     outline: 0; }
 
 .menu-holder {
-  height: 60px;
-  border-bottom: 1px solid #e1e1e1; }
+  height: 48px; }
 
 .white-tent {
-  width: 45%;
-  padding: 1rem;
+  width: 25%;
+  padding: 0.5rem 0;
   padding-bottom: 0; }
 
-.site-branding {
-  width: 1024px;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+.banner-wrap {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: rgba(255, 255, 255, 0.85); }
 
-/* Menus */
-.main-navigation {
-  padding: 1rem 0;
+.site-branding {
+  width: 1120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 1024px; }
-  .main-navigation ul {
-    width: 400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-  .main-navigation a {
-    text-decoration: none; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto; }
+
+/* Menus */
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.main-navigation ul {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+
+.main-navigation a {
+  text-decoration: none; }
 
 /* Small menu. */
 /*--------------------------------------------------------------
@@ -519,6 +524,10 @@ a {
 .widget {
   margin: 0 0 0;
   /* Make sure select elements fit in widgets. */ }
+  .widget ul {
+    padding: 0; }
+    .widget ul li {
+      list-style: none; }
   .widget select {
     max-width: 100%; }
 
@@ -645,7 +654,7 @@ h1 {
           transform: translate(-50%, -50%); }
 
 .product-type-blocks, .journal-blocks {
-  width: 1024px;
+  width: 1120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,7 +686,8 @@ h1 {
     border: 1px solid;
     padding: .75rem 1.5rem; }
   .product-type-blocks a:visited, .journal-blocks a:visited {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
   .product-type-blocks a:hover, .journal-blocks a:hover {
     background-color: #19625d;
     border: 0 solid;
@@ -723,3 +733,55 @@ h1 {
     color: white; }
   .journal-blocks .entry-meta a:active {
     text-decoration: none; }
+
+.page-title {
+  margin: 0;
+  margin-top: 3.75rem; }
+
+.product-type-blocks-archives {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto; }
+  .product-type-blocks-archives .product-type-block-wrapper-archives a:link {
+    text-decoration: none; }
+
+.thumbnail-wrapper {
+  overflow: hidden;
+  border-bottom: 5px solid #e1e1e1;
+  height: 250px; }
+  .thumbnail-wrapper img {
+    height: 250px;
+    width: 100%; }
+
+.products-wrapper {
+  width: 1120px;
+  border-top: 1px dashed #c8c8c8;
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(300px, auto);
+  margin: 0 auto;
+  margin-top: 3.75rem; }
+  .products-wrapper .single-product-wrapper {
+    border: 1px solid #e1e1e1; }
+
+.site-content {
+  padding: 48px; }
+  .site-content .content-area {
+    width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr; }
+
+.widget-area {
+  padding: 2rem;
+  border-left: 1px solid #e1e1e1; }
+
+.articles-wrapper {
+  padding: 2rem; }

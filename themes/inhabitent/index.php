@@ -19,11 +19,13 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php /* Start the Loop */ ?>
+			<div class="articles-wrapper">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; ?>
+</div> <!-- articles-wrapper -->
 
 			<?php the_posts_navigation(); ?>
 
@@ -34,7 +36,8 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
+<?php get_sidebar(); ?>
+		
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
