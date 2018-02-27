@@ -11,6 +11,7 @@
 		padding: 0;
 		li {
 			list-style: none;
+			padding-bottom:1rem;
 		}
 	}
 	/* Make sure select elements fit in widgets. */
@@ -28,20 +29,26 @@
 	img {
 		float: right;
 	}
+	.widget-title {
+		color: #d99054;
+		text-transform: uppercase;
+		margin-top: 0;
+	}
 }
 
-.widget-title {
-	color: #d99054;
-	text-transform: uppercase;
-	margin-top: 0;
-}
-
-.copyright-footer{
+.copyright-footer {
 	color: white;
 	display: flex;
-	justify-content:center;
+	justify-content: center;
+	margin-top: 2rem;
 }
 
+.icons{
+	display:flex;
+	li{
+		padding-right:0.5rem;
+	}
+}
 /* Search widget. */
 
 .widget_search .search-submit {

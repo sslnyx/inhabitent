@@ -496,7 +496,8 @@ textarea {
   .widget ul {
     padding: 0; }
     .widget ul li {
-      list-style: none; }
+      list-style: none;
+      padding-bottom: 1rem; }
   .widget select {
     max-width: 100%; }
 
@@ -508,11 +509,10 @@ textarea {
   margin: 0 auto; }
   .secondary img {
     float: right; }
-
-.widget-title {
-  color: #d99054;
-  text-transform: uppercase;
-  margin-top: 0; }
+  .secondary .widget-title {
+    color: #d99054;
+    text-transform: uppercase;
+    margin-top: 0; }
 
 .copyright-footer {
   color: white;
@@ -521,7 +521,15 @@ textarea {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  margin-top: 2rem; }
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .icons li {
+    padding-right: 0.5rem; }
 
 /* Search widget. */
 .widget_search .search-submit {
