@@ -22,19 +22,16 @@
                 }
                 ?>
                 </div>
-                <div id="footer-sidebar3">
-                <?php
-                if(is_active_sidebar('footer-sidebar-3')){
-                dynamic_sidebar('footer-sidebar-3');
-                }
-                ?>
-                </div>
-                <a class= "footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri();?>/images/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
+
+                <a class= "footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
                 </div>
                 <span class="copyright-footer">copyright &copy; 2018 inhabitent</span>
                 </div><!-- .site-info -->
             </footer><!-- #colophon -->
         </div><!-- #page -->
-        <?php wp_footer(); ?>
+				<?php wp_footer(); ?>
+				
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     </body>
 </html>

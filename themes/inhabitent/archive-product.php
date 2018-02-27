@@ -58,7 +58,8 @@ get_header(); ?>
 							<div class="thumbnail-wrapper">
 				<?php
 							 if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail('large' ); ?>
+							 	<a href="<?php the_permalink();?>"> <?php the_post_thumbnail('large' ); ?></a>
+							
 						<?php endif; ?>
 						</div>
 				<div class="product-name-price">

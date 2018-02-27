@@ -62,8 +62,10 @@
 
 
 .main-navigation {
-
-	// width: 1024px;
+	display:flex;
+	.search-form{
+		padding-left: 1rem;
+	}
 	ul {
 		width: 400px;
 		display: flex;

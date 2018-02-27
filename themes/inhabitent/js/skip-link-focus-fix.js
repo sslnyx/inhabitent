@@ -5,6 +5,27 @@
  *
  * Learn more: https://github.com/Automattic/_s/pull/136
  */
+(function($){
+  $('.main-navigation .search-field').hide();
+
+  $('.main-navigation .icon-search').on('click', function(evt){
+    evt.preventDefault();
+ 
+    $('.main-navigation .search-field').show('fast');
+    $('.main-navigation .search-field').focus();
+    
+  });
+ 
+  $('.main-navigation .search-field').on('blur', function(){
+ 
+    $('.main-navigation .search-field').hide('fast');
+  });
+ 
+ 
+ }(jQuery));
+
+
+
 (function() {
   var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
     isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
