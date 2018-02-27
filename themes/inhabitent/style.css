@@ -817,12 +817,15 @@ h1 {
     color: #2f1339; }
 
 .thumbnail-wrapper {
+  position: relative;
   overflow: hidden;
   border-bottom: 5px solid #e1e1e1;
   height: 250px; }
   .thumbnail-wrapper img {
-    height: 250px;
-    width: 100%; }
+    position: absolute;
+    height: 100%;
+    max-width: none;
+    width: auto; }
 
 .products-wrapper {
   width: 1120px;
