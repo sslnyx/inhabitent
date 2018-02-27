@@ -7,15 +7,15 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-about">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header-about">
+		<?php the_title( '<h1 class="entry-title-about">', '</h1>' ); ?>
   </header><!-- .entry-header -->
 
   
@@ -23,7 +23,7 @@ get_header(); ?>
   // echo CFS()->get('hero_image');
   ?>
 
-	<div class="entry-content">
+	<div class="entry-content-about">
   
     <?php the_content(); ?>
     <h2>Our Story</h2>

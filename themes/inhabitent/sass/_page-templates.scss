@@ -133,7 +133,14 @@ h1 {
   .product-type-block-wrapper-archives {
     .btn2 {
       &:link {
+        text-transform: uppercase;
         text-decoration: none;
+      }
+      &:visited {
+        color: $color__link-visited;
+      }
+      &:hover{
+        color: $color__link-hover;
       }
     }
   }
@@ -189,7 +196,7 @@ h1 {
     color: white;
     margin: 0;
     margin-top: 2.25rem;
-    
+    text-align: left;
   }
   img {
     // position:absolute;
@@ -237,4 +244,62 @@ h1 {
 
 .entry-content-index {
   margin-bottom: 2rem;
+}
+
+//////////////////////////////////single product//////////////////////////
+
+.article-wrapper-single-product{
+  display:flex;
+  width: 1120px;
+  margin:0 auto;
+  padding-top: 3.75rem;
+  .entry-header{
+    width: 560px;
+  }
+  .entry-content-single-product{
+    width:50%;
+    padding-left: 2rem;
+    h1{
+      color: #d99054;
+      text-align: left;
+      margin:0;
+    }
+  }
+}
+
+////////////////////////////////////about///////////////////////////
+
+.entry-title-about{
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.entry-content-about{
+  width: 800px;
+  margin:0 auto;
+  h2{
+    text-align: center;
+  }
+}
+
+
+////////////////////////////////find us/////////////////////
+.find-us-title{
+  h1{
+    margin:0;
+    margin-top: 3.75rem;
+    text-align: left;
+  }
+}
+
+////////////////product type///////////////
+
+.taxonomy-description{
+  p{
+    text-align: center;
+  }
 }

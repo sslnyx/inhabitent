@@ -36,9 +36,10 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer"> -->
 		<?php
-		 inhabitent_entry_footer();
+		//  inhabitent_entry_footer();
 		  ?>
-	</footer><!-- .entry-footer -->
+	<!-- </footer> -->
+	<!-- .entry-footer -->
 </article><!-- #post-## -->

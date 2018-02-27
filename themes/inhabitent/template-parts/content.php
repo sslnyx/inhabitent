@@ -21,6 +21,7 @@
 			<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

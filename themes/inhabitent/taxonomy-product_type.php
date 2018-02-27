@@ -20,16 +20,30 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+			<div class="products-wrapper">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
+			<div class="single-product-wrapper">
+							<div class="thumbnail-wrapper">
 				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+							 if ( has_post_thumbnail() ) : ?>
+							 	<a href="<?php the_permalink();?>"> <?php the_post_thumbnail('large' ); ?></a>
+							
+						<?php endif; ?>
+						</div>
+						<div class="product-name-price">
+				
+				<?php	$price =  CFS()->get( 'price' ); ?>
+					
+				
+				<?php the_title( sprintf( '<p class="entry-title">'), '..........'.$price.'</p>' ); ?>				
 
+												</div> <!-- product-name-price -->
+				</div><!--single-product-wrapper -->
 			<?php endwhile; ?>
-
+</div>
 			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
@@ -41,5 +55,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
