@@ -224,7 +224,7 @@ h1 {
   position: relative;
 }
 
-.entry-title-index {
+.entry-title-index{
   background-color: #248a83;
   position: absolute;
   text-transform: uppercase;
@@ -315,4 +315,11 @@ h1 {
   p{
     text-align: center;
   }
+}
+
+
+//////////////////journal archive////////////////////
+.page-title-journal-archive{
+  @extend .page-title;
+  text-align: left;
 }

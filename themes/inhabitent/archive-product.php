@@ -66,7 +66,7 @@ get_header(); ?>
 				<?php	$price =  CFS()->get( 'price' ); ?>
 					
 				
-				<?php the_title( sprintf( '<p class="entry-title">'), '..........'.$price.'</p>' ); ?>				
+				<?php the_title( sprintf( '<p class="entry-title-product">'), '..........'.$price.'</p>' ); ?>				
 
 												</div> <!-- product-name-price -->
 				</div><!--single-product-wrapper -->

@@ -809,7 +809,7 @@ h1 {
 .buttonReadMore:active {
   text-decoration: none; }
 
-.page-title {
+.page-title, .page-title-journal-archive {
   margin: 0;
   margin-top: 3.75rem; }
 
@@ -950,3 +950,6 @@ h1 {
 
 .taxonomy-description p {
   text-align: center; }
+
+.page-title-journal-archive {
+  text-align: left; }
