@@ -134,7 +134,7 @@ $adventure = new WP_Query( $args_adventure ); ?>
 
 </div>
 <!-- .journal-blocks -->
-<a class="buttonReadMore" href="<?php the_permalink();?>"> read more</a>
+<a class="btn" href="<?php echo esc_url( home_url( '/' )).'adventure/';?>"> more adventures</a>
 
 
 	 

@@ -814,7 +814,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px; }
+  grid-gap: 10px;
+  margin-bottom: 3.75rem; }
   .adventure-containor h1 {
     font-family: "Merriweather";
     font-weight: 300;
