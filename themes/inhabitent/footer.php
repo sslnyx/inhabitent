@@ -7,7 +7,8 @@
 ?>
 <!-- #content -->
                 <footer id="colophon" class="site-footer" role="contentinfo">
-                <div class="site-info"> <div id="footer-sidebar" class="secondary">
+                <div class="site-info">
+                     <div id="footer-sidebar" class="secondary">
                 <div id="footer-sidebar1">
                 <?php
                 if(is_active_sidebar('footer-sidebar-1')){
@@ -22,11 +23,15 @@
                 }
                 ?>
                 </div>
-
+                <div>
                 <a class= "footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
                 </div>
-                <span class="copyright-footer">copyright &copy; 2018 inhabitent</span>
+            </div>
                 </div><!-- .site-info -->
+                
+
+                <span class="copyright-footer">copyright &copy; 2018 inhabitent</span>
+
             </footer><!-- #colophon -->
         </div><!-- #page -->
 				<?php wp_footer(); ?>

@@ -11,7 +11,7 @@
 		padding: 0;
 		li {
 			list-style: none;
-			padding-bottom:1rem;
+			padding-bottom: 1rem;
 		}
 	}
 	/* Make sure select elements fit in widgets. */
@@ -26,8 +26,13 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr;
 	margin: 0 auto;
-	img {
-		float: right;
+	.footer-logo {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-start; 
+			img{
+				width: 300px;
+			}
 	}
 	.widget-title {
 		color: #d99054;
@@ -43,12 +48,13 @@
 	margin-top: 2rem;
 }
 
-.icons{
-	display:flex;
-	li{
-		padding-right:0.5rem;
+.icons {
+	display: flex;
+	li {
+		padding-right: 0.5rem;
 	}
 }
+
 /* Search widget. */
 
 .widget_search .search-submit {

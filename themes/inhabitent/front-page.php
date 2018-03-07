@@ -60,9 +60,11 @@ $journals = new WP_Query( $args ); ?>
 	 <?php while ( $journals->have_posts() ) : $journals->the_post(); ?>
 	 
 <div class="journal-wrapper">
+    <div class="post-thumbnail">
 	 <?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
+        <?php endif; ?>
+</div>
 
       
 			

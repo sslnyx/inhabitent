@@ -22,11 +22,12 @@ h1 {
 
 .product-type-blocks {
   width: 1120px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
   margin: 0 auto;
   .product-type-block-wrapper {
-    width: 245px;
+    width: 100%;
     border: 1px solid #e1e1e1;
     border-top: 5px solid #e1e1e1;
     padding: 1rem;
@@ -69,17 +70,26 @@ h1 {
 }
 
 .journal-blocks {
-  @extend .product-type-blocks;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-gap: 25px;
   .journal-wrapper {
     border: 1px solid #e1e1e1;
-    width: 332px;
     padding: 0;
+    .post-thumbnail{
+      height:250px;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        height: 100%;
+        max-width: none;
+        width:auto;
+        border-bottom: 5px solid #e1e1e1;
+      }
+    }
   }
-  img {
-    width: 100%;
-    max-height: 220px;
-    border-bottom: 5px solid #e1e1e1;
-  }
+
   .entry-meta {
     font-size: 0.75rem;
     padding: 0.75rem;

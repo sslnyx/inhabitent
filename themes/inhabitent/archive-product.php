@@ -14,7 +14,6 @@ get_header(); ?>
 			
 					<!-- Product terms -->
 
-
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">

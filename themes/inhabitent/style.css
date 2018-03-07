@@ -558,8 +558,18 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   margin: 0 auto; }
-  .secondary img {
-    float: right; }
+  .secondary .footer-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .secondary .footer-logo img {
+      width: 300px; }
   .secondary .widget-title {
     color: #d99054;
     text-transform: uppercase;
@@ -706,30 +716,27 @@ h1 {
   .site-logo img {
     width: 50%; }
 
-.product-type-blocks, .journal-blocks {
+.product-type-blocks {
   width: 1120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
   margin: 0 auto; }
-  .product-type-blocks .product-type-block-wrapper, .journal-blocks .product-type-block-wrapper {
-    width: 245px;
+  .product-type-blocks .product-type-block-wrapper {
+    width: 100%;
     border: 1px solid #e1e1e1;
     border-top: 5px solid #e1e1e1;
     padding: 1rem; }
-    .product-type-blocks .product-type-block-wrapper:hover, .journal-blocks .product-type-block-wrapper:hover {
+    .product-type-blocks .product-type-block-wrapper:hover {
       border: 1px solid #d99054;
       border-top: 5px solid #d99054; }
-  .product-type-blocks img, .journal-blocks img {
+  .product-type-blocks img {
     width: 70px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto; }
-  .product-type-blocks p, .journal-blocks p {
+  .product-type-blocks p {
     text-align: center; }
 
 .btn:link {
@@ -752,27 +759,34 @@ h1 {
 .btn:active {
   text-decoration: none; }
 
-.journal-blocks .journal-wrapper {
-  border: 1px solid #e1e1e1;
-  width: 332px;
-  padding: 0; }
-
-.journal-blocks img {
-  width: 100%;
-  max-height: 220px;
-  border-bottom: 5px solid #e1e1e1; }
-
-.journal-blocks .entry-meta {
-  font-size: 0.75rem;
-  padding: 0.75rem;
-  padding-bottom: 1.25rem; }
-  .journal-blocks .entry-meta h1 {
-    margin: 0;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: #248a83;
-    min-height: 80px; }
+.journal-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px; }
+  .journal-blocks .journal-wrapper {
+    border: 1px solid #e1e1e1;
+    padding: 0; }
+    .journal-blocks .journal-wrapper .post-thumbnail {
+      height: 250px;
+      position: relative;
+      overflow: hidden; }
+      .journal-blocks .journal-wrapper .post-thumbnail img {
+        position: absolute;
+        height: 100%;
+        max-width: none;
+        width: auto;
+        border-bottom: 5px solid #e1e1e1; }
+  .journal-blocks .entry-meta {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    padding-bottom: 1.25rem; }
+    .journal-blocks .entry-meta h1 {
+      margin: 0;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: #248a83;
+      min-height: 80px; }
 
 .buttonReadMore:link {
   background-color: white;
