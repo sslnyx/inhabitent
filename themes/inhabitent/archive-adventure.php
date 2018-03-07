@@ -20,14 +20,15 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<div class="adventure-page-blocks">
+			
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
 					get_template_part( 'template-parts/content' );
 				?>
-
 			<?php endwhile; ?>
-
+</div>
 			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
@@ -39,5 +40,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

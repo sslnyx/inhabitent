@@ -44,3 +44,42 @@ function product_type_taxonomy() {
 
 }
 add_action( 'init', 'product_type_taxonomy', 0 );
+
+// Register Custom Taxonomy
+function adventure_taxonomy() {
+
+	$labels = array(
+		'name'                       => 'Adventures',
+		'singular_name'              => 'Adventure',
+		'menu_name'                  => 'Adventures',
+		'all_items'                  => 'All Adventures',
+		'parent_item'                => 'Parent Adventure',
+		'parent_item_colon'          => 'Parent Adventure:',
+		'new_item_name'              => 'New Adventure Name',
+		'add_new_item'               => 'Add New Adventure',
+		'edit_item'                  => 'Edit Adventure',
+		'update_item'                => 'Update Adventure',
+		'view_item'                  => 'View Adventure',
+		'separate_items_with_commas' => 'Separate items with commas',
+		'add_or_remove_items'        => 'Add or remove Adventures',
+		'choose_from_most_used'      => 'Choose from the most used',
+		'popular_items'              => 'Popular Adventures',
+		'search_items'               => 'Search Adventures',
+		'not_found'                  => 'Not Found',
+		'no_terms'                   => 'No Adventures',
+		'items_list'                 => 'Adventures list',
+		'items_list_navigation'      => 'Adventures list navigation',
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'adventure', array( 'post' ), $args );
+
+}
+add_action( 'init', 'adventure_taxonomy', 0 );

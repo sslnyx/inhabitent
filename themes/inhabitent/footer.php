@@ -23,8 +23,8 @@
                 }
                 ?>
                 </div>
-                <div>
-                <a class= "footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
+                <div class= "footer-logo" >
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logos/inhabitent-logo-text.svg" class="footer__logo-img"/></a>
                 </div>
             </div>
                 </div><!-- .site-info -->

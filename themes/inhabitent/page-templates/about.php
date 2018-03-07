@@ -25,7 +25,9 @@ get_header(); ?>
 
 	<div class="entry-content-about">
   
-    <?php the_content(); ?>
+		<?php
+		 the_content(); 
+		 ?>
     <h2>Our Story</h2>
     <?php echo CFS()->get('our_story');?>
     <h2>Our Team</h2>
