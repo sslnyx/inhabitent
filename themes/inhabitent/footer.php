@@ -37,6 +37,6 @@
 				<?php wp_footer(); ?>
 				
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+                <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     </body>
 </html>
